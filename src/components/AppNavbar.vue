@@ -18,8 +18,8 @@
 
 <style lang="scss" scoped>
 nav {
-  width: 90vw;
-  height: 6vh;
+  width: 100%;
+  height: 8%;
   background-color: blue;
 
   .nav-menu {
