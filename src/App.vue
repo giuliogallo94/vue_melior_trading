@@ -1,8 +1,9 @@
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
 import AppSidebar from "./components/AppSidebar.vue";
+import AppMainHome from "./components/AppMainHome.vue";
 export default {
-  components: { AppNavbar, AppSidebar },
+  components: { AppNavbar, AppSidebar, AppMainHome },
 };
 </script>
 
@@ -11,6 +12,7 @@ export default {
     <AppSidebar />
     <div class="content col-span-7">
       <AppNavbar />
+      <AppMainHome />
     </div>
   </div>
 </template>
