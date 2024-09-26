@@ -9,11 +9,4 @@ export default {
   <AppNavbar />
 </template>
 
-<style lang="scss">
-body {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  color: azure;
-}
-</style>
+<style lang="scss"></style>
