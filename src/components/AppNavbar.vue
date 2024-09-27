@@ -17,10 +17,13 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/variables" as *;
+
 nav {
   width: 100%;
   height: 8%;
-  background-color: blue;
+  background-color: black;
+  color: $primary-gold;
 
   .nav-menu {
     ul {
@@ -29,7 +32,6 @@ nav {
           border-radius: 50%;
           width: 2.8vw;
           aspect-ratio: 1;
-          background-color: black;
         }
       }
     }
