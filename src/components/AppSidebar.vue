@@ -7,11 +7,18 @@
 
   <nav class="col-span-1">
     <div class="side-logo">
-      <img src="../assets/img/logo-crop.png" alt="" class="p-3" />
+      <router-link to="/">
+        <img src="../assets/img/logo-crop.png" alt="" class="p-3" />
+      </router-link>
     </div>
     <div class="sidebar-menu flex justify-center items-center">
       <ul class="flex flex-col gap-4 justify-center items-center">
-        <li><span class="material-symbols-outlined text-5xl"> apps </span></li>
+        <!-- Dashboard link -->
+        <router-link to="/dashboard">
+          <li>
+            <span class="material-symbols-outlined text-5xl"> apps </span>
+          </li>
+        </router-link>
         <li>
           <span class="material-symbols-outlined"> format_list_bulleted </span>
         </li>
@@ -46,9 +53,12 @@ nav {
       height: 50%;
       width: 100%;
       background-color: $primary-gold;
+      // clip-path: ellipse(0% 0%, 25% 40%, at 50% 50%);
 
       li {
-        font-size: rem;
+        span {
+          font-size: 2rem;
+        }
       }
     }
   }
