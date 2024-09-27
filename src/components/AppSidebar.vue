@@ -1,4 +1,14 @@
-<script></script>
+<script>
+import { store } from "../data/store";
+
+export default {
+  data() {
+    return { store };
+  },
+
+  methods: {},
+};
+</script>
 
 <template>
   <link
@@ -14,35 +24,14 @@
     <div class="sidebar-menu flex justify-center items-center">
       <!-- Link's Menu -->
       <ul class="flex flex-col gap-4 justify-center items-center">
-        <!-- Dashboard link -->
-        <router-link to="/dashboard">
-          <li>
-            <span class="material-symbols-outlined text-5xl"> apps </span>
-          </li>
-        </router-link>
-
-        <!-- TradesList Link -->
-        <router-link to="/tradesList">
+        <router-link
+          v-for="(link, index) in store.sideBarLinks"
+          :to="link.path">
           <li>
             <span class="material-symbols-outlined">
-              format_list_bulleted
+              {{ link.spanText }}
             </span>
           </li>
-        </router-link>
-
-        <!-- MoreStats Link -->
-        <router-link to="/moreStats">
-          <li><span class="material-symbols-outlined"> monitoring </span></li>
-        </router-link>
-
-        <!-- Pnl Link -->
-        <router-link to="/pnl">
-          <li><span class="material-symbols-outlined"> donut_large </span></li>
-        </router-link>
-
-        <!-- TraderProfile Link -->
-        <router-link to="/traderProfile">
-          <li><span class="material-symbols-outlined"> person </span></li>
         </router-link>
       </ul>
       <!-- /Link's Menu -->
@@ -78,6 +67,10 @@ nav {
       li {
         span {
           font-size: 2rem;
+        }
+
+        .active {
+          color: red;
         }
       }
     }

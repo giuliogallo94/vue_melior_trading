@@ -2,7 +2,7 @@
 
 <template>
   <div class="main-home grid grid-cols-2 items-center gap-x-11 px-7">
-    Dashboard
+    TraderProfile
   </div>
 </template>
 
