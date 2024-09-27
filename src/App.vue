@@ -1,9 +1,9 @@
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
 import AppSidebar from "./components/AppSidebar.vue";
-import AppMainHome from "./components/AppMainHome.vue";
+import AppMain from "./components/AppMain.vue";
 export default {
-  components: { AppNavbar, AppSidebar, AppMainHome },
+  components: { AppNavbar, AppSidebar, AppMain },
 };
 </script>
 
@@ -12,14 +12,20 @@ export default {
     <AppSidebar />
     <div class="content col-span-7">
       <AppNavbar />
-      <AppMainHome />
+      <main>
+        <router-view></router-view>
+      </main>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .ms_container {
-  width: 100%vw;
+  width: 100vw;
   height: 100vh;
+
+  main {
+    height: 92%;
+  }
 }
 </style>
