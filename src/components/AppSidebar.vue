@@ -12,6 +12,7 @@
       </router-link>
     </div>
     <div class="sidebar-menu flex justify-center items-center">
+      <!-- Link's Menu -->
       <ul class="flex flex-col gap-4 justify-center items-center">
         <!-- Dashboard link -->
         <router-link to="/dashboard">
@@ -19,13 +20,32 @@
             <span class="material-symbols-outlined text-5xl"> apps </span>
           </li>
         </router-link>
-        <li>
-          <span class="material-symbols-outlined"> format_list_bulleted </span>
-        </li>
-        <li><span class="material-symbols-outlined"> monitoring </span></li>
-        <li><span class="material-symbols-outlined"> donut_large </span></li>
-        <li><span class="material-symbols-outlined"> person </span></li>
+
+        <!-- TradesList Link -->
+        <router-link to="/tradesList">
+          <li>
+            <span class="material-symbols-outlined">
+              format_list_bulleted
+            </span>
+          </li>
+        </router-link>
+
+        <!-- MoreStats Link -->
+        <router-link to="/moreStats">
+          <li><span class="material-symbols-outlined"> monitoring </span></li>
+        </router-link>
+
+        <!-- Pnl Link -->
+        <router-link to="/pnl">
+          <li><span class="material-symbols-outlined"> donut_large </span></li>
+        </router-link>
+
+        <!-- TraderProfile Link -->
+        <router-link to="/traderProfile">
+          <li><span class="material-symbols-outlined"> person </span></li>
+        </router-link>
       </ul>
+      <!-- /Link's Menu -->
     </div>
   </nav>
 </template>
