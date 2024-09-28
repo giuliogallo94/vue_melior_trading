@@ -6,9 +6,16 @@ export default {
     return { store, selectedLink: "", index: 0 };
   },
 
-  methods: {},
-
-  created() {},
+  computed: {
+    activePath() {
+      return this.$route.path;
+    },
+  },
+  methods: {
+    isActiveLink(linkPath) {
+      return this.$route.path === linkPath;
+    },
+  },
 };
 </script>
 
@@ -20,15 +27,15 @@ export default {
   <nav class="col-span-1">
     <div class="sidebar-menu flex justify-center items-center">
       <!-- Link's Menu -->
-      <ul class="flex flex-col gap-4 justify-center items-center">
+      <ul class="flex flex-col gap-4 justify-center text-center">
         <router-link
           v-for="(link, index) in store.sideBarLinks"
           :to="link.path"
-          @click="this.selectedLink = index">
-          <li @click="console.log(this.selectedLink, index)">
+          @click="this.store.selectedSideLink = index">
+          <li>
             <span
               class="material-symbols-outlined"
-              :class="this.selectedLink === index ? 'selected' : ''">
+              :class="isActiveLink(link.path) ? 'selected' : ''">
               {{ link.spanText }}
             </span>
           </li>
@@ -45,19 +52,21 @@ export default {
 nav {
   width: 100%;
   height: 100%;
-  background-color: $primary-gold-light;
 
   .sidebar-menu {
+    width: 50%;
     height: 92%;
 
     ul {
       height: 70%;
       width: 100%;
       background-color: $primary-gold;
-      // clip-path: ellipse(0% 0%, 25% 40%, at 50% 50%);
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
 
       li {
         span {
+          color: black;
           font-size: 2rem;
           &:hover {
             color: white;

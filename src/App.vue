@@ -20,9 +20,13 @@ export default {
 </template>
 
 <style lang="scss">
+@use "./style/partials/variables" as *;
+
 .ms_container {
   width: 100vw;
   height: 100vh;
+  background-color: $main-bg;
+  color: white;
 
   .content {
     height: 92%;

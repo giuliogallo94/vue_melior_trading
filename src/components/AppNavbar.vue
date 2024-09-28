@@ -31,7 +31,6 @@
 nav {
   width: 100%;
   height: 8%;
-  background-color: black;
   color: $primary-gold;
 
   .nav-logo {
