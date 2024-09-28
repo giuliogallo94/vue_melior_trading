@@ -2,10 +2,10 @@
 
 <template>
   <div class="main-home grid grid-cols-2 items-center gap-x-11 px-7">
-    <div class="info-home">Quadrante1</div>
-    <div class="info-home">Quadrante2</div>
-    <div class="info-home">Quadrante3</div>
-    <div class="info-home">Quadrante4</div>
+    <div class="info-home">PNL</div>
+    <div class="info-home">Overall Stats</div>
+    <div class="info-home">Last Trades</div>
+    <div class="info-home">Traded Assets</div>
   </div>
 </template>
 

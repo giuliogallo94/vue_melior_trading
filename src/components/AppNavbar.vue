@@ -1,9 +1,18 @@
 <script></script>
 
 <template>
-  <nav class="ms-auto flex items-center justify-end">
-    <div class="nav-menu p-5">
-      <ul class="flex items-center gap-3">
+  <nav
+    class="ms-auto grid grid-cols-8 items-center justify-between place-content-center">
+    <!-- Logo -->
+    <router-link to="/">
+      <div class="nav-logo col-span-1">
+        <img src="../assets/img/logo-crop.png" alt="" />
+      </div>
+    </router-link>
+    <!-- /Logo -->
+
+    <div class="nav-menu col-start-7 col-span-2 p-5">
+      <ul class="flex justify-end items-center gap-3">
         <li class="">Nome Cognome</li>
         <li class="">
           <img
@@ -25,6 +34,12 @@ nav {
   background-color: black;
   color: $primary-gold;
 
+  .nav-logo {
+    img {
+      max-width: 30%;
+      margin: 0 auto;
+    }
+  }
   .nav-menu {
     ul {
       li {

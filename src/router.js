@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "./pages/Home.vue";
-import Dashboard from "./pages/Dashboard.vue";
 import TradesList from "./pages/TradesList.vue";
 import MoreStats from "./pages/MoreStats.vue";
 import Pnl from "./pages/Pnl.vue";
@@ -15,11 +14,7 @@ const router = createRouter({
       name: "home",
       component: Home,
     },
-    {
-      path: "/dashboard",
-      name: "dashboard",
-      component: Dashboard,
-    },
+
     {
       path: "/tradesList",
       name: "tradesList",
