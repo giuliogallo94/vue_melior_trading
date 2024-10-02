@@ -6,8 +6,8 @@ export const store = reactive({
   selectedSideLink: "",
   sideBarLinks: [
     {
-      name: "home",
-      path: "/",
+      name: "dashboard",
+      path: "/dashboard",
       spanText: "home",
     },
     {
